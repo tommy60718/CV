@@ -1,0 +1,124 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1-Page Tech CV - Yang Sen (Liam) Lin
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{fontawesome5}
+\setstretch{1.04}
+
+% Section headings
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\vspace{2pt}\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% Lists
+\setlist[itemize]{
+  leftmargin=1.6em,
+  labelsep=0.4em,
+  topsep=2pt,
+  itemsep=2pt,
+  parsep=0pt
+}
+% Hanging bullet environment
+\newenvironment{hangitems}{%
+  \begin{itemize}[leftmargin=1.6em,labelsep=0.4em,topsep=2pt,itemsep=2pt,parsep=0pt]
+    \setlength{\parindent}{0pt}%
+}{%
+  \end{itemize}
+}
+
+% Entry helpers
+\newcommand{\entry}[3]{%
+  \noindent\textbf{#1} \hfill #2%
+  \if\relax\detokenize{#3}\relax
+  \else
+    \\[-1pt]\textit{#3}\par
+  \fi
+  \vspace{2pt}%
+}
+\newcommand{\sep}{\;\textbar\;}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{D}{>{\raggedleft\arraybackslash}p{31mm}}
+\newcommand{\daterange}[2]{%
+  {\small\textit{#1\,--\,#2}}%
+}
+
+\begin{document}
+%========== Header ==========
+\begin{center}
+  {\Large \bfseries Yang Sen (Liam) Lin}\\[4pt]
+  \faIcon{envelope} \ \href{mailto:tommy60718.en10@nycu.edu.tw}{tommy60718.en10@nycu.edu.tw}
+  \quad\sep\quad
+  \faIcon{github} \ \href{https://github.com/tommy60718}{github.com/tommy60718}
+  \quad\sep\quad
+  \faIcon{linkedin} \ \href{https://www.linkedin.com/in/}{linkedin.com/in/}
+\end{center}
+
+%========== Education ==========
+\section*{Education}
+\textbf{National Yang Ming Chiao Tung University (NYCU)} \hfill Sep 2021 -- Dec 2025 (expected)\\
+B.S., Mechanical Engineering \& Computer Science (cross-disciplinary) \hfill GPA: 4.04/4.3 (last 60), 3.85/4.3 (overall)
+
+%========== Publications ==========
+\section*{Publications}
+\textbf{\href{https://spf-web.pages.dev/}{See, Point, Fly — a training-free vision-language UAV navigation framework}. CoRL 2025}\\[-1pt]
+Chih Yao Hu*, \textbf{Yang-Sen Lin}*, Yuna Lee, Chih-Hai Su, Jie-Ying Lee, Shr-Ruei Tsai, Chin-Yang Lin, Kuan-Wen Chen, Tsung-Wei Ke, Yu-Lun Liu
+\\[-2pt]\small{* equal contribution}\normalsize
+
+%========== Work & Research ==========
+\section*{Work \& Research Experience}
+\entry{NYCU Computational Photography Lab}{Sep 2024 -- Present}{Undergraduate Researcher \hfill Hsinchu, Taiwan}
+\begin{hangitems}
+  \item Research skills: paper survey and reimplementation, paper writing (\href{https://spf-web.pages.dev/}{See, Point, Fly}), Spatial math problem-solving.
+  \item Engineering skills: simulator-to-real-world system design, experiment design, and evaluation design.
+\end{hangitems}
+
+\entry{Wolley Inc.}{Jul 2024 -- Aug 2024}{Firmware Engineer Intern \hfill Hsinchu, Taiwan}
+\begin{hangitems}
+  \item Optimized CXL Type-3 (HDM) integration; reduced host bandwidth pressure; improved I/O efficiency.
+  \item Built C diagnostics/profiling for throughput/latency.
+\end{hangitems}
+
+\entry{Google Developer Student Club (GDSC) NYCU}{Jul 2024 -- Jun 2025}{Organization Lead \hfill Hsinchu, Taiwan (Hybrid)}
+\begin{hangitems}
+  \item Led 24-member org; supervised 6 AI/SWE teams; delivered 10+ technical events.
+\end{hangitems}
+
+%========== Projects ==========
+\section*{Projects}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabularx}{\linewidth}{@{}Y D@{}}
+  \textbf{\href{https://github.com/Hu-chih-yao/see-point-fly}{See, Point, Fly — Learning-Free VLM UAV Navigation}} & \daterange{Nov~2024}{Aug~2025} \\
+  Zero-shot language-guided UAV control. See, Point, Fly (SPF) enables UAVs to navigate to any goal based on free-form natural language instructions in any environment, without task-specific training. \textit{Skills:} Python, mss, Matplotlib, VLM. & \\
+  \\[-1pt]
+  \textbf{\href{https://github.com/tommy60718/2023_UAV-CV}{Vision-based UAV Autopilot}} & \daterange{Sep~2023}{Dec~2023} \\
+  Build autonomous Tello drone: detect ArUco, navigate marker course, follow black line without backtracking, and land precisely on final marker. \textit{Skills:} Python, OpenCV, NumPy, djitellopy (Tello), PID control, camera calibration, morphology/edges, YOLOv7 (GPU). & \\
+  \\[-1pt]
+  \textbf{\href{https://github.com/tommy60718/2023_flappy_bird}{C++ Flappy Bird (SDL)}} & \daterange{Sep~2023}{Nov~2023} \\
+  SDL graphics/audio; physics+collision; jitter fix via \texttt{SDL\_GetTicks()}; latency 50\%$\rightarrow$\textless{}5\%; OOP refactor — \textit{Skills:} C++, SDL, game loop, OOP & \\
+\end{tabularx}
+
+%========== Awards & Extracurricular ==========
+\section*{Awards \& Extracurricular}
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt,topsep=2pt]
+  \item \textbf{Academic Achievements Award} — Top 5\% (NYCU) \hfill 2023 Fall
+  \item \textbf{Academic Achievements Award} — Top 5\% (NYCU) \hfill 2024 Fall
+  \item \textbf{Taipei Metro Hackathon} — 2nd Place \& Popularity Award (among 92 teams) \hfill May 2024
+  \item \textit{Leadership/Activities:} Swimming Team (3y), GDSC Lead (1y), Guitar Club Instructor (1y)
+\end{itemize}
+
+%========== Skills ==========
+\section*{Skills}
+\textbf{Languages:} Python, C/C++ \qquad
+\textbf{AI/ML/Robotics:} OpenCV, YOLO, VLMs, control (PID) \\
+\textbf{Systems/Firmware:} CXL Type-3, HDM concepts, embedded profiling \qquad
+\textbf{Tools:} Linux, Git, SDL \\
+\textbf{Strengths:} Algorithm optimization, computer vision, robotics programming, research, team leadership
+
+\end{document}
