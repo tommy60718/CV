@@ -17,7 +17,7 @@
 \titleformat{\section}{\large\bfseries}{}{0em}{}[\vspace{2pt}\titlerule]
 \titlespacing*{\section}{0pt}{6pt}{4pt}
 
-% Lists
+% Lists (global default)
 \setlist[itemize]{
   leftmargin=1.6em,
   labelsep=0.4em,
@@ -25,9 +25,16 @@
   itemsep=2pt,
   parsep=0pt
 }
-% Hanging bullet environment
+% Hanging bullet environment (default)
 \newenvironment{hangitems}{%
   \begin{itemize}[leftmargin=1.6em,labelsep=0.4em,topsep=2pt,itemsep=2pt,parsep=0pt]
+    \setlength{\parindent}{0pt}%
+}{%
+  \end{itemize}
+}
+% Compact hanging bullets for Work & Research
+\newenvironment{hangitemscompact}{%
+  \begin{itemize}[leftmargin=1.6em,labelsep=0.4em,topsep=0pt,itemsep=1pt,parsep=0pt]
     \setlength{\parindent}{0pt}%
 }{%
   \end{itemize}
@@ -40,7 +47,7 @@
   \else
     \\[-1pt]\textit{#3}\par
   \fi
-  \vspace{2pt}%
+  \vspace{1pt}% tightened from 2pt to reduce gap before bullets
 }
 \newcommand{\sep}{\;\textbar\;}
 \newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
@@ -63,7 +70,8 @@
 %========== Education ==========
 \section*{Education}
 \textbf{National Yang Ming Chiao Tung University (NYCU)} \hfill Sep 2021 -- Dec 2025 (expected)\\
-B.S., Mechanical Engineering \& Computer Science (cross-disciplinary) \hfill GPA: 4.04/4.3 (last 60), 3.85/4.3 (overall)
+B.S., Mechanical Engineering \& Computer Science (cross-disciplinary) \hfill GPA: 4.04/4.3 (last 60), 3.85/4.3 (overall)\\
+Ranking: 16/116 (13.8\%)
 
 %========== Publications ==========
 \section*{Publications}
@@ -74,32 +82,32 @@ Chih Yao Hu*, \textbf{Yang-Sen Lin}*, Yuna Lee, Chih-Hai Su, Jie-Ying Lee, Shr-R
 %========== Work & Research ==========
 \section*{Work \& Research Experience}
 \entry{NYCU Computational Photography Lab}{Sep 2024 -- Present}{Undergraduate Researcher \hfill Hsinchu, Taiwan}
-\begin{hangitems}
+\begin{hangitemscompact}
   \item Research skills: paper survey and reimplementation, paper writing (\href{https://spf-web.pages.dev/}{See, Point, Fly}), Spatial math problem-solving.
   \item Engineering skills: simulator-to-real-world system design, experiment design, and evaluation design.
-\end{hangitems}
+\end{hangitemscompact}
 
 \entry{Wolley Inc.}{Jul 2024 -- Aug 2024}{Firmware Engineer Intern \hfill Hsinchu, Taiwan}
-\begin{hangitems}
+\begin{hangitemscompact}
   \item Optimized CXL Type-3 (HDM) integration; reduced host bandwidth pressure; improved I/O efficiency.
   \item Built C diagnostics/profiling for throughput/latency.
-\end{hangitems}
+\end{hangitemscompact}
 
 \entry{Google Developer Student Club (GDSC) NYCU}{Jul 2024 -- Jun 2025}{Organization Lead \hfill Hsinchu, Taiwan (Hybrid)}
-\begin{hangitems}
+\begin{hangitemscompact}
   \item Led GDSC NYCU for one year, managing a team of 24 members across five departments. Oversaw 6 AI/Software Engineering project teams and organized over 10 technical events, including software development workshops and technical sharing sessions.
-\end{hangitems}
+\end{hangitemscompact}
 
 %========== Projects ==========
 \section*{Projects}
-\renewcommand{\arraystretch}{1.0} % Tightened from 1.05 for less vertical space
+\renewcommand{\arraystretch}{1.0}
 \begin{tabularx}{\linewidth}{@{}Y D@{}}
   \textbf{\href{https://github.com/Hu-chih-yao/see-point-fly}{See, Point, Fly — Learning-Free VLM UAV Navigation}} & \daterange{Nov~2024}{Aug~2025} \\
-  Zero-shot language-guided UAV control. See, Point, Fly (SPF) enables UAVs to navigate to any goal based on free-form natural language instructions in any environment, without task-specific training. \textit{Skills:} Python, mss, Matplotlib, VLM. & \\
+  \hspace{1em}Zero-shot language-guided UAV control. See, Point, Fly (SPF) enables UAVs to navigate to any goal based on free-form natural language instructions in any environment, without task-specific training. \textit{Skills:} Python, mss, Matplotlib, VLM. & \\
   \textbf{\href{https://github.com/tommy60718/2023_UAV-CV}{Vision-based UAV Autopilot}} & \daterange{Sep~2023}{Dec~2023} \\
-  Build autonomous Tello drone: detect ArUco, navigate marker course, follow black line without backtracking, and land precisely on final marker. \textit{Skills:} Python, OpenCV, NumPy, djitellopy (Tello), PID control, camera calibration, morphology/edges, YOLOv7 (GPU). & \\
+  \hspace{1em}Build autonomous Tello drone: detect ArUco, navigate marker course, follow black line without backtracking, and land precisely on final marker. \textit{Skills:} Python, OpenCV, NumPy, djitellopy (Tello), PID control, camera calibration, morphology/edges, YOLOv7 (GPU). & \\
   \textbf{\href{https://github.com/tommy60718/2023_flappy_bird}{C++ Flappy Bird (SDL)}} & \daterange{Sep~2023}{Nov~2023} \\
-  SDL graphics/audio; physics+collision; jitter fix via \texttt{SDL\_GetTicks()}; latency 50\%$\rightarrow$\textless{}5\%; OOP refactor — \textit{Skills:} C++, SDL, game loop, OOP & \\
+  \hspace{1em}Built a C++ Flappy Bird game using SDL libraries with object-oriented design, optimized physics, audio integration, and cross-platform compatibility. \textit{Skills:} C++, SDL, game loop, OOP & \\
 \end{tabularx}
 
 %========== Awards & Extracurricular ==========
