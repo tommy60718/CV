@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 1-Page Tech CV - Yang Sen (Liam) Lin
+% 2-Page Tech CV - Yang Sen (Liam) Lin
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[10pt,letterpaper]{article}
 \usepackage[margin=0.7in]{geometry}
@@ -11,6 +11,9 @@
 \usepackage{tabularx}
 \usepackage{ragged2e}
 \usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
 \setstretch{1.04}
 
 % Section headings
@@ -25,106 +28,162 @@
   itemsep=2pt,
   parsep=0pt
 }
-% Hanging bullet environment (default)
+
+% Hanging bullet environment (for work experience etc.)
 \newenvironment{hangitems}{%
   \begin{itemize}[leftmargin=1.6em,labelsep=0.4em,topsep=2pt,itemsep=2pt,parsep=0pt]
-    \setlength{\parindent}{0pt}%
-}{%
-  \end{itemize}
-}
-% Compact hanging bullets for Work & Research
-\newenvironment{hangitemscompact}{%
-  \begin{itemize}[leftmargin=1.6em,labelsep=0.4em,topsep=0pt,itemsep=1pt,parsep=0pt]
-    \setlength{\parindent}{0pt}%
 }{%
   \end{itemize}
 }
 
-% Entry helpers
-\newcommand{\entry}[3]{%
-  \noindent\textbf{#1} \hfill #2%
-  \if\relax\detokenize{#3}\relax
-  \else
-    \\[-1pt]\textit{#3}\par
-  \fi
-  \vspace{1pt}% tightened from 2pt to reduce gap before bullets
-}
-\newcommand{\sep}{\;\textbar\;}
-\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
-\newcolumntype{D}{>{\raggedleft\arraybackslash}p{31mm}}
+% Helper for date ranges
 \newcommand{\daterange}[2]{%
   {\small\textit{#1\,--\,#2}}%
 }
 
 \begin{document}
+
 %========== Header ==========
 \begin{center}
   {\Large \bfseries Yang Sen (Liam) Lin}\\[4pt]
   \faIcon{envelope} \ \href{mailto:tommy60718.en10@nycu.edu.tw}{tommy60718.en10@nycu.edu.tw}
-  \quad\sep\quad
+  \quad\textbar\quad
   \faIcon{github} \ \href{https://github.com/tommy60718}{github.com/tommy60718}
-  \quad\sep\quad
+  \quad\textbar\quad
   \faIcon{linkedin} \ \href{https://www.linkedin.com/in/}{linkedin.com/in/}
 \end{center}
 
 %========== Education ==========
 \section*{Education}
-\textbf{National Yang Ming Chiao Tung University (NYCU)} \hfill Sep 2021 -- Dec 2025 (expected)\\
-B.S., Mechanical Engineering \& Computer Science (cross-disciplinary) \hfill GPA: 4.04/4.3 (last 60), 3.85/4.3 (overall)\\
-Ranking: 7/61 (11.4\%)
+\noindent
+\textbf{National Yang Ming Chiao Tung University (NYCU)} \hfill \textbf{Sep 2021 – Dec 2025 (expected)}\\
+B.S., Mechanical Engineering \& Computer Science (cross-disciplinary) \hfill GPA: \textbf{4.04/4.3} (last 60), 3.85/4.3 (overall)\\
+\textbf{Academic Excellence Award $\times$ 2} (top 5\% of the dep.)\\
+Ranking: \textbf{7/61 (11.4\%)}
+
+\vspace{4pt}
+\noindent
+\textbf{Relevant Coursework (Mathematics \& Robotics):} Engineering Mathematics (I) \& (II), Automatic Control (I) \& (II), Computer Vision for UAV Autopilot, Fluid Mechanics, Heat Transfer, Applied Mechanics (II).
+
+\vspace{2pt}
+\noindent
+\textbf{Relevant Coursework (CS \& AI):} Intro to Algorithms, Data Structures and OOP, Introduction to Artificial Intelligence, Computer Vision, Introduction to Image Processing, Computer Programming, Introduction to Database Systems.
 
 %========== Publications ==========
 \section*{Publications}
-\textbf{\href{https://spf-web.pages.dev/}{See, Point, Fly — a training-free vision-language UAV navigation framework}. CoRL 2025}\\[-1pt]
-Chih Yao Hu*, \textbf{Yang-Sen Lin}*, Yuna Lee, Chih-Hai Su, Jie-Ying Lee, Shr-Ruei Tsai, Chin-Yang Lin, Kuan-Wen Chen, Tsung-Wei Ke, Yu-Lun Liu
-\\[-2pt]\small{* equal contribution}\normalsize
+\noindent
+\textbf{[1] See, Point, Fly — a training-free vision-language UAV navigation framework.} \textit{\textbf{CoRL 2025}}\\
+Chih Yao Hu*, \textbf{Yang-Sen Lin}*, Yuna Lee, Chih-Hai Su, Jie-Ying Lee, Shr-Ruei Tsai, Chin-Yang Lin, Kuan-Wen Chen, Tsung-Wei Ke, Yu-Lun Liu (* equal contribution)\\
+\textit{(Note: CoRL ranked \textbf{\#3 in Robotics} on Google Scholar, \textbf{H5-index: 107})}
 
-%========== Work & Research ==========
+\vspace{2pt}
+\noindent
+\textbf{Computational Impact:} Proposed a learning-free framework that grounds 2D visual-language prompts into 3D metric controls via \textbf{geometric constraints}, achieving \textbf{SOTA zero-shot generalization} in unstructured environments.
+
+%========== Work & Research Experience ==========
 \section*{Work \& Research Experience}
-\entry{NYCU Computational Photography Lab}{Sep 2024 -- Present}{Undergraduate Researcher \hfill Hsinchu, Taiwan}
-\begin{hangitemscompact}
-  \item Research skills: paper survey and reimplementation, paper writing (\href{https://spf-web.pages.dev/}{See, Point, Fly}), Spatial math problem-solving.
-  \item Engineering skills: simulator-to-real-world system design, experiment design, and evaluation design.
-\end{hangitemscompact}
 
-\entry{Wolley Inc.}{Jul 2024 -- Aug 2024}{Firmware Engineer Intern \hfill Hsinchu, Taiwan}
-\begin{hangitemscompact}
-  \item Optimized CXL Type-3 (HDM) integration; reduced host bandwidth pressure; improved I/O efficiency.
-  \item Built C diagnostics/profiling for throughput/latency.
-\end{hangitemscompact}
+\noindent
+\textbf{OMRON SINIC X} \hfill \textit{Tokyo, Japan}\\
+\textit{Research Intern (Incoming) | Advisor: Dr. Masashi Hamaya} \hfill \textit{Jun. 2026 – Aug. 2026}
+\begin{hangitems}
+    \item \textbf{Foundation Model Distillation:} Formulate a \textbf{knowledge distillation framework} to \textbf{compress large-scale Vision-Language-Action (VLA) models}, addressing computational bottlenecks to enable \textbf{real-time inference} on edge hardware.
+    \item \textbf{Control Optimization:} Investigate \textbf{latency minimization techniques} for high-frequency control loops in \textbf{soft robotics}, targeting submission to top-tier conferences (e.g., \textbf{CoRL/ICRA}).
+\end{hangitems}
 
-\entry{Google Developer Student Club (GDSC) NYCU}{Jul 2024 -- Jun 2025}{Organization Lead \hfill Hsinchu, Taiwan (Hybrid)}
-\begin{hangitemscompact}
-  \item Led GDSC NYCU for one year, managing a team of 24 members across five departments. Oversaw 6 AI/Software Engineering project teams and organized over 10 technical events, including software development workshops and technical sharing sessions.
-\end{hangitemscompact}
+\noindent
+\textbf{Computational Photography Lab, NYCU} \hfill \textit{Hsinchu, Taiwan}\\
+\textit{Undergraduate Researcher | Advisor: Prof. Yu-Lun Liu} \hfill \textit{Sep. 2024 – Present}
+\begin{hangitems}
+    \item \textbf{Geometric Formulation:} Derived a \textbf{mathematical action-to-control mapping} to ground high-level VLM inference (2D coordinates) into low-level drone dynamics (3D trajectories), \textbf{solving depth ambiguity} without depth sensors.
+    \item \textbf{Sim2Real \& Validation:} Overcame the simulation-to-reality gap by calibrating coordinate systems and \textbf{optimizing control latency}, validated through \textbf{55+ real-world flight experiments} demonstrating long-horizon planning.
+    \item \textbf{Skills:} Python, VLM integration, Sim2Real, academic writing.
+\end{hangitems}
 
-%========== Projects ==========
-\section*{Projects}
-\renewcommand{\arraystretch}{1.0}
-\begin{tabularx}{\linewidth}{@{}Y D@{}}
-  \textbf{\href{https://github.com/Hu-chih-yao/see-point-fly}{See, Point, Fly — Learning-Free VLM UAV Navigation}} & \daterange{Nov~2024}{Aug~2025} \\
-  \hspace{1em}Zero-shot language-guided UAV control. See, Point, Fly (SPF) enables UAVs to navigate to any goal based on free-form natural language instructions in any environment, without task-specific training. \textit{Skills:} Python, mss, Matplotlib, VLM. & \\
-  \textbf{\href{https://github.com/tommy60718/2023_UAV-CV}{Vision-based UAV Autopilot}} & \daterange{Sep~2023}{Dec~2023} \\
-  \hspace{1em}Build autonomous Tello drone: detect ArUco, navigate marker course, follow black line without backtracking, and land precisely on final marker. \textit{Skills:} Python, OpenCV, NumPy, djitellopy (Tello), PID control, camera calibration, morphology/edges, YOLOv7 (GPU). & \\
-  \textbf{\href{https://github.com/tommy60718/2023_flappy_bird}{C++ Flappy Bird (SDL)}} & \daterange{Sep~2023}{Nov~2023} \\
-  \hspace{1em}Built a C++ Flappy Bird game using SDL libraries with object-oriented design, optimized physics, audio integration, and cross-platform compatibility. \textit{Skills:} C++, SDL, game loop, OOP & \\
-\end{tabularx}
+\noindent
+\textbf{Wolley Inc.} \hfill \textit{Hsinchu, Taiwan}\\
+\textit{Firmware Engineer Intern | Advisor: Dr. Yu-Ming Chang (Director)} \hfill \textit{Jul. 2024 – Aug. 2024}
+\begin{hangitems}
+    \item \textbf{System Profiling:} Engineered C-based diagnostic tools to profile \textbf{throughput and latency} for \textbf{CXL Type-3 solutions}, providing critical metrics to \textbf{reduce host bandwidth pressure}.
+    \item \textbf{Parallel Computing:} Refactored the internal testing system using \textbf{parallel computing techniques} in Linux, significantly reducing unit testing time by \textbf{optimizing I/O efficiency}.
+    \item \textbf{Skills:} C/C++, Linux, Virtual Machines, Parallelization, Algorithms.
+\end{hangitems}
 
-%========== Awards & Extracurricular ==========
-\section*{Awards \& Extracurricular}
-\begin{itemize}[leftmargin=1.2em,itemsep=2pt,topsep=2pt]
-  \item \textbf{Academic Achievements Award} — Top 5\% (NYCU) \hfill 2023 Fall
-  \item \textbf{Academic Achievements Award} — Top 5\% (NYCU) \hfill 2024 Fall
-  \item \textbf{Taipei Metro Hackathon} — 2nd Place \& Popularity Award (among 92 teams) \hfill May 2024
-  \item \textit{Leadership/Activities:} Swimming Team (3y), GDSC Lead (1y), Guitar Club Instructor (1y)
+%========== Technical Skills ==========
+\section*{Technical Skills}
+\begin{itemize}[leftmargin=1.6em, labelsep=0.4em, topsep=2pt, itemsep=1pt, parsep=0pt]
+    \item \textbf{Languages:} Python \textit{(Proficient)}, \textbf{C/C++} \textit{(System-level \& Embedded)}, C\# \textit{(Unity)}.
+    \item \textbf{AI \& Computer Vision:} OpenCV, YOLO, \textbf{VLM}, PyTorch, GANs.
+    \item \textbf{Robotics \& Control:} \textbf{PID Control}, UAV Dynamics, SDL \textit{(Physics simulation)}.
+    \item \textbf{Systems \& Tools:} Linux \textit{(Profiling)}, Git, Docker, \textbf{CXL/HDM Protocols}, Embedded Profiling Tools.
 \end{itemize}
 
-%========== Skills ==========
-\section*{Skills}
-\textbf{Languages:} Python, C/C++ \qquad
-\textbf{AI/ML/Robotics:} OpenCV, YOLO, VLMs, control (PID) \\
-\textbf{Systems/Firmware:} CXL Type-3, HDM concepts, embedded profiling \qquad
-\textbf{Tools:} Linux, Git, SDL \\
-\textbf{Strengths:} Algorithm optimization, computer vision, robotics programming, research, team leadership
+\newpage
+
+%========== Selected Projects ==========
+\section*{Selected Projects}
+
+\noindent
+\textbf{Vision-Based UAV Autopilot System} \textbar\ \textit{Python, OpenCV, Control Theory}
+\begin{hangitems}
+    \item \textbf{Algorithmic Optimization:} Optimized visual tracking algorithms from \textbf{quadratic $\mathcal{O}(N^2)$ to linear $\mathcal{O}(N)$ complexity} via \textbf{heuristic-based sparse sampling}, eliminating computational bottlenecks for real-time control.
+    \item \textbf{Control Implementation:} Engineered a closed-loop \textbf{PID controller from scratch}, iteratively tuning proportional and derivative gains ($K_p, K_d$) to achieve \textbf{$<$3cm hover accuracy} without relying on external positioning systems.
+\end{hangitems}
+
+\noindent
+\textbf{Perceptual Image Restoration via High-Order Modeling} \textbar\ \textit{Python, PyTorch, GANs}
+\begin{hangitems}
+    \item \textbf{Mathematical Modeling:} Modeled signal degradation via \textbf{Generalized Gaussian kernels} ($D = (k \circledast I)_{\downarrow s} + n$) to simulate complex blur artifacts, incorporating \textbf{high-order degradation processes}.
+    \item \textbf{Perceptual Alignment:} Mitigated domain shift by fine-tuning generative priors, achieving superior \textbf{Mean Opinion Scores (MOS)} in perceptual fidelity compared to standard interpolation baselines.
+\end{hangitems}
+
+\noindent
+\textbf{DesignMate: Computational AR Sketching Interface} \textbar\ \textit{Unity, C\#, Linear Algebra}
+\begin{hangitems}
+    \item \textbf{Geometry Pipeline:} Developed a \textbf{vector-to-mesh pipeline} using \textbf{cubic interpolation} to smooth discrete stylus inputs, driving a diffusion-based generation workflow.
+    \item \textbf{Resource Efficiency:} Designed a robust polling mechanism to manage \textbf{GPU memory allocation}, preventing bottlenecks on mobile AR hardware during distributed inference.
+\end{hangitems}
+
+%========== Leadership & Service ==========
+\section*{Leadership & Service}
+
+\noindent
+\textbf{Google Developer Student Club (GDSC) NYCU} \hfill \textit{Hsinchu, Taiwan}\\
+\textit{Chapter Lead} \hfill \textit{Jul. 2024 – Jun. 2025}
+\begin{hangitems}
+    \item \textbf{Organizational Leadership:} Directed the university chapter comprising 24 staff across 5 departments; supervised \textbf{6 AI \& Software Engineering project teams} to deliver technical solutions.
+    \item \textbf{Impact:} Bridged the gap between academic theory and industry practice by organizing \textbf{10+ technical workshops} and project sharing sessions, impacting \textbf{40+ student developers} and fostering a peer-learning ecosystem.
+\end{hangitems}
+
+\noindent
+\textbf{Meichu Hackathon (Logitech Division)} \hfill \textit{Hsinchu, Taiwan}\\
+\textit{Tech Lead \& PM (3rd Place Winner)} \hfill \textit{Sep. 2025}
+\begin{hangitems}
+    \item \textbf{Technical Management:} Led a cross-functional team of 5 to develop \textit{DesignMate} under a \textbf{48-hour deadline}; architected the system framework based on team expertise.
+    \item \textbf{Communication:} Delivered the final technical pitch, demonstrating the ability to communicate complex engineering concepts to non-technical judges.
+\end{hangitems}
+
+\noindent
+\textbf{NYCU Varsity Swim Team} \hfill \textit{Hsinchu, Taiwan}\\
+\textit{Team Member \& Relay Gold Medalist} \hfill \textit{Jan. 2022 – Dec. 2024}
+\begin{hangitems}
+    \item \textbf{Achievement of Grit:} Progressed from a novice swimmer to a \textbf{City-Level Gold Medalist} (Relay) within 3 years. Demonstrated exceptional discipline balancing \textbf{8+ hours of weekly high-intensity training} with rigorous research commitments.
+\end{hangitems}
+
+\noindent
+\textbf{Community Service} \hfill \textit{Taipei, Taiwan}\\
+\textit{Homeless Support Volunteer} \hfill \textit{Sep. 2025 – Nov. 2025}
+\begin{hangitems}
+    \item \textbf{Social Initiative:} Initiated and executed a 10-week meal distribution program; managed procurement logistics and led weekly team reflection sessions to improve service delivery.
+\end{hangitems}
+
+%========== Honors & Awards ==========
+\section*{Honors \& Awards}
+\begin{itemize}[leftmargin=1.6em, labelsep=0.4em, topsep=2pt, itemsep=1pt, parsep=0pt]
+    \item \textbf{3rd Place}, Meichu Hackathon (Logitech Division) \hfill \textit{Sep. 2025}
+    \item \textbf{2nd Place \& Popularity Award}, Taipei Metro Hackathon \textit{(Ranked 2nd out of 92 teams)} \hfill \textit{May 2024}
+    \item \textbf{Gold Medal}, Men's 4x100m Relay, Hsinchu City Swimming Championship \hfill \textit{Sep. 2024}
+    \item \textbf{Academic Excellence Award} $\times$ 2 \textit{(Top 5\% of Dep.)} \hfill \textit{Fall 2023, Fall 2024}
+\end{itemize}
 
 \end{document}
