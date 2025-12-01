@@ -1,2 +1,2 @@
 # CV
-CV for harvard MSCSE
+CV & SOP for stanford MSEE
