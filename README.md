@@ -1,2 +1,2 @@
 # CV
-CV & SOP for stanford MSEE
+CV & SOP & PS for UCLA MSECE
