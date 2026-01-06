@@ -6,28 +6,43 @@
 \usepackage[utf8]{inputenc}
 \usepackage{setspace}             % For line spacing
 \usepackage{parskip}              % Adds space between paragraphs, removes indentation
+\usepackage{fancyhdr}             % For persistent headers/footers
 
-% Set line spacing to 1.15 for readability without wasting space
-\setstretch{1.0}
+% Fix for fancyhdr warning: \headheight is too small
+\setlength{\headheight}{15pt}
+
+% Set line spacing to double spaced
+\doublespacing
+
+% Configure Header and Footer
+\pagestyle{fancy}
+\fancyhf{} % Clear default header/footer
+\fancyhead[R]{Yang Sen (Liam) Lin} % Name in the header of every page
+\fancyfoot[C]{\thepage} % Page number in the footer
+\renewcommand{\headrulewidth}{0pt} % Optional: Removes the horizontal line in the header
 
 \begin{document}
 
-% Header Section
+% Title Section
 \begin{center}
-    {\Large \textbf{Personal Statement}} \\
-    \vspace{1em}
-    \textbf{Applicant:} Yang Sen (Liam) Lin \hfill \textbf{Program:} Computer Science and Engineering M.S.E.
+    {\Large \textbf{Personal Statement: Columbia MSCS (VGIR Track)}} \\
+    \vspace{0.5em}
+    \textbf{Program:} Master of Science in Computer Science (MSCS)
 \end{center}
 \vspace{1em}
 
-The defining cadence of my undergraduate years was set not in a laboratory, but in a pool. As a varsity swimmer and City-Level Gold Medalist, I committed to over eight hours of high-intensity training weekly. This physical discipline taught me that ``oxygen debt'' is temporary, but the grit required to push through it is permanent. I applied this same resilience to a significant academic barrier: pivoting from Mechanical Engineering (ME) to Computer Science (CS).
+% Body Paragraphs
 
-Navigating this cross-disciplinary transition was isolating. Entering the world of algorithms from a background of dynamics and thermodynamics, I initially lacked the foundational syntax of my CS peers and felt like an outsider in a ``gatekept'' community. However, overcoming this steep learning curve gave me a unique vantage point. I realized that my value wasn't just in mastering code, but in bridging the gap between the physical constraints of hardware and the abstract logic of software. This struggle motivated my decision to pursue graduate studies; I realized that to build truly robust robotic systems, I needed to formally master the language of CS to complement my intuition for ME.
+\emph{I aspire to \textbf{architect trustworthy embodied intelligence} by unifying the semantic reasoning of vision-language models with the provable safety guarantees of control theory.}
 
-This experience shaped my core identity: I am not just an engineer; I am a ``Technical Bridge.'' This philosophy transformed my approach to leadership as the Chapter Lead of the Google Developer Student Club (GDSC). I noticed that non-CS majors often felt intimidated by the rigid culture of technical academia. To counter this, I acted as a ``Translator.'' I recall mentoring a Literature major paralyzed by API logic; rather than simply correcting her syntax, I framed the code as a narrative structure with a distinct grammar. Her breakthrough reinforced my belief that diverse metaphors make technical concepts more robust. By orchestrating workshops for over 40 diverse students, I fostered an ecosystem where electrical engineers could fearlessly debate architecture with software theorists, proving that cross-disciplinary friction is fuel for innovation.
+In my recent research accepted to \textbf{CoRL 2025}, titled ``\textbf{See, Point, Fly},'' I identified a fundamental trade-off in the current state of robotic autonomy: geometric rules provide reliability but become brittle in dynamic environments; conversely, Generative Vision-Language-Action (VLA) models offer adaptability but suffer from hallucinations and high computational latency. My objective at \textbf{Columbia University} is to resolve this tension. I aim to architect systems where the semantic creativity of VLMs is grounded by physical constraints. This is not merely an algorithmic challenge; it requires a convergence of \textbf{Structured World Models and Robust Control}—a synthesis that specifically demands the academic resources at Columbia.
 
-My commitment to human-centric engineering extends beyond campus walls. Initiating a meal distribution program for the homeless in Taipei was an exercise in ``human-centered logistics.'' I applied my optimization background to streamline procurement, yet quickly realized that efficiency metrics fail when they ignore human dignity. Managing these logistics grounded my high-level research ambitions in gritty reality, reminding me that a system is only as robust as its ability to serve the most vulnerable.
+My journey toward this objective began with a focus on algorithmic decoupling. In my \textbf{CoRL 2025} work, I formulated a geometric projection algorithm to ground 2D VLM prompts into 3D metric controls, achieving a \textbf{93.9\% success rate} in unstructured environments. However, rigorous testing revealed a ``\textbf{reactivity bottleneck}'': my static geometric priors failed against dynamic, erratic obstacles. This failure highlighted a critical insight: while geometry provides structure, it lacks dynamics. To evolve from static heuristics to adaptive policies, I must incorporate physics directly into the learning loop. This specific technical impasse drives my decision to apply to Columbia. I specifically need the expertise of \textbf{Prof. Yunzhu Li} to elevate my understanding of structured representations into physics-informed world models, and the guidance of \textbf{Prof. Matei Ciocarlie} to ensure these learning-based policies adhere to provable safety dynamics in the real world.
 
-I seek to join the University of Michigan not only to advance my technical research but to contribute to a community that values this breadth of perspective. The MSE in CSE at UMich is the ideal environment to refine my role as a technical bridge-builder. I plan to organize interdisciplinary roundtables---specifically connecting students from the Robotics Institute with CSE theorists---to foster a collaborative environment where admitting ``I don't know'' is the first step toward discovery. By sharing my lived experience of navigating academic barriers, I hope to ensure that the UMich engineering community remains not just intellectually elite, but profoundly inclusive.
+Beyond algorithms, my research philosophy is defined by the constraints of the physical layer. In safety-critical robotics, inference latency is not just a performance metric; it is a failure mode. My internship at \textbf{Wolley Inc.} grounded me in this reality. There, I engineered C-based diagnostic tools to profile \textbf{CXL memory bandwidth}. This experience taught me that algorithmic safety is irrelevant if the hardware stack cannot support the control frequency. Recognizing this ``full-stack'' bottleneck, I was selected as an incoming \textbf{Research Intern at OMRON SINIC X}. This opportunity validates my potential to bridge the gap between high-level reasoning and edge deployment. I see the \textbf{Vision, Graphics, Interaction, and Robotics (VGIR)} track at Columbia as the essential academic bridge that connects my hardware profiling experience with high-level AI reasoning, transforming me into a full-stack \textbf{Computational Systems Architect}.
+
+My academic preparation is defined by the convergence of \textbf{Mechanical Engineering and Computer Science}. While ME grounded me in the physical first principles of system dynamics, my dual focus in CS equipped me with the algorithmic reasoning of modern AI. I demonstrated the ability to synthesize these fields at a graduate level by securing an \textbf{A+ in Graduate Computer Vision} and applying Projective Geometry to derive non-linear unprojection laws in my CoRL paper. This practical application prepares me for the rigorous theoretical training of the MSCS program. I specifically plan to take \textbf{EEME E6602 Modern Control Theory} to formalize heuristic safety constraints into provably stable guarantees, and \textbf{COMS E6998 Topics in Robot Learning} to master the data-driven techniques necessary to move beyond my current zero-shot frameworks. Furthermore, to support my goal of real-time deployment, I look forward to \textbf{EECS E4750 Heterogeneous Computing} to explore hardware acceleration for heavy foundation models.
+
+Finally, the ``\textbf{Engineering for Humanity}'' mission of Columbia Engineering resonates with my desire to build technology that functions reliably in the real world. As the \textbf{GDSC Chapter Lead}, I bridged the gap between theory and practice for over 40 student developers, and I am eager to bring this collaborative spirit to the NYC tech ecosystem. The \textbf{Columbia MSCS} is the pivotal step that transforms me from a robotics engineer who builds working prototypes into a \textbf{Computational Systems Architect} capable of defining the safety guarantees required to deploy autonomous agents at a global scale.
 
 \end{document}
